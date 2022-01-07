@@ -54,6 +54,9 @@
   },
   "husky": {
     "hooks": {
+      "pre-push": [
+        "npm audit"
+      ],
       "pre-commit": [
         "npm run lint-staged"
       ]
