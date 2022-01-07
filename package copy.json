@@ -1,29 +1,31 @@
 {
-  "name": "test-201",
+  "name": "nfhs-course-taking-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "NFHS new architecture apis",
+  "main": "index.js",
   "scripts": {
     "start": "node app/server.js",
     "start-dev": "nodemon app/server.js",
     "debug": "nodemon --inspect app/server.js 80",
     "audit": "npm audit fix --force",
     "lint": "eslint .",
-    "lint-staged": "npm audit && npm run lint && npm test",
+    "lint-staged": "npm run lint && npm test",
     "test-watch": "NODE_ENV=test mocha --watch",
     "test": "NODE_ENV=test mocha --timeout 5000 --recursive  --exit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lalumahato/test-201.git"
+    "url": "git+https://github.com/webonise/nfhs-course-taking-api.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "NFHS"
+  ],
+  "author": "Webonise Lab",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lalumahato/test-201/issues"
+    "url": "https://github.com/webonise/nfhs-course-taking-api/issues"
   },
-  "homepage": "https://github.com/lalumahato/test-201#readme",
+  "homepage": "https://github.com/webonise/nfhs-course-taking-api#readme",
   "dependencies": {
     "cookie-parser": "1.4.3",
     "cors": "2.8.5",
@@ -31,7 +33,7 @@
     "dotenv": "10.0.0",
     "ejs": "3.1.6",
     "express": "4.17.1",
-    "helmet": "3.12.0",
+    "helmet": "^5.0.0",
     "module-alias": "2.2.2",
     "sequelize": "^6.12.4",
     "sequelize-cli": "6.3.0",
