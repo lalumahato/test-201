@@ -7,9 +7,9 @@
     "start": "node app/server.js",
     "start-dev": "nodemon app/server.js",
     "debug": "nodemon --inspect app/server.js 80",
-    "audit": "npm audit",
+    "audit": "npm audit fix --force",
     "lint": "eslint .",
-    "lint-staged": "npm audit",
+    "lint-staged": "npm run lint && npm test",
     "test-watch": "NODE_ENV=test mocha --watch",
     "test": "NODE_ENV=test mocha --timeout 5000 --recursive  --exit"
   },
@@ -55,7 +55,7 @@
   "husky": {
     "hooks": {
       "pre-commit": [
-        "npm run audit"
+        "npm run lint-staged"
       ]
     }
   },
